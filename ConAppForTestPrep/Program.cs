@@ -12,9 +12,11 @@ public class Start
 		namesCount.AddName("John");
 		namesCount.AddName("Mary");
 		namesCount.AddName("Mary");
+		namesCount.AddName("Chris");
 
 		Console.WriteLine("Fraction of Johns: {0}", namesCount.NameProportion("John"));
 		Console.WriteLine("Fraction of Marys: {0}", namesCount.NameProportion("Mary"));
+		Action<String> print = (x) => Console.WriteLine("Fraction of Chris: {0}", namesCount.NameProportion("Chris"));
 
 		Console.ReadKey();
 	}

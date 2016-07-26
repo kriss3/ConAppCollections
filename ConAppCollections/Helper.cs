@@ -32,6 +32,9 @@ namespace ConAppCollections
 				case 7:
 					RunSeven();
 					break;
+				case 8:
+					RunEight();
+					break;
 				default: 
 					break;
 			}
@@ -113,6 +116,19 @@ namespace ConAppCollections
 			Console.WriteLine(IsPalindrome("Noel sees Leon"));	
 		}
 
+		private static void RunEight()
+		{
+			var baseString = "TEST";
+			IEnumerable<char> charString = baseString.ToCharArray();
+			var reverse = charString.Reverse();
+
+			var results = new StringBuilder();
+			foreach (var item in reverse)
+			{
+				results.Append(item);
+			}
+			Console.WriteLine(results);
+		}
 		private static bool IsPalindrome(string myText)
 		{
 			//remove spaces and dot at the end
